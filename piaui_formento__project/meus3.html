@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--Google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- animate on scroll (AOS) CSS -->
+    <link href="assets/css/aos.css" rel="stylesheet" />
+    <!-- tailwind script file  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          container: {
+            center: true,
+            padding: {
+              DEFAULT: "13px",
+              sm: "15px",
+              lg: "15px",
+              xl: "15px",
+            },
+            screens: {
+              sm: "600px",
+              md: "768px",
+              lg: "1024px",
+              xl: "1150px",
+              "2xl": "1150px",
+            },
+          },
+          fontFamily: {
+            ibm: ["IBM Plex Sans", "sans-serif"],
+          },
+          extend: {
+            colors: {
+              primary: "#0F3771",
+              borderWhite: "#E1E5ED",
+              muted: "#8A8D91",
+              bgYellow: "#FFF1BF",
+              offWhite: "#E1E5ED",
+              yellowBorder: "#FFE8AD",
+              textColor: "#161A28",
+              cGreen: "#109E16",
+              cRed: "#E01D1D",
+            },
+            backgroundSize: {
+              "size-200": "200% 200%",
+            },
+            backgroundPosition: {
+              "pos-0": "0% 0%",
+              "pos-100": "100% 100%",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          font-family: "IBM Plex Sans", sans-serif;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .bg-100 {
+          background-size: 100% 100%;
+        }
+        .calc-height {
+            height: calc(100% - 20px); /* Adjust the calculation as needed */
+        }
+      }
+    </style>
+
+    <title>Tailwind Project file</title>
+  </head>
+
+  <body>
+    <div
+      class="grid grid-rows-[auto_1fr_auto] max-w-[430px] w-full pt-6 mx-auto"
+    >
+      <header>
+        <!-- header  -->
+        <div class="w-full flex items-center">
+          <a class="p-5 cursor-pointer inline-block">
+            <img src="assets/img/icons/backArrow.png" alt="" class="w-6 h-6" />
+          </a>
+          <p class="text-center w-full py-5 font-ibm font-semibold text-lg">
+            Meus empréstimos
+          </p>
+          <a class="p-5 cursor-pointer inline-block">
+            <img src="assets/img/icons/search.png" alt="" class="w-6 h-6" />
+          </a>
+        </div>
+      </header>
+
+      <section
+        class="flex flex-col items-center justify-start px-6 pt-6 max-w-[430px] w-full gap-2"
+      >
+        <!-- single card head  -->
+        <div class="max-w-[430px] w-full flex items-center justify-between">
+          <p class="inline-block font-ibm font-bold text-base text-textColor">
+            Empréstimo
+          </p>
+
+          <p class="font-ibm font-bold text-2xl text-cGreen">R$ 20.304,00</p>
+        </div>
+        <!--! single card 1  -->
+        <div
+          class="border border-offWhite max-w-[430px] w-full rounded-lg mb-6"
+        >
+          <!-- single card body  -->
+          <div class="flex items-center justify-center flex-col gap-2 p-4">
+            <div class="flex items-center justify-between w-full">
+              <span
+                class="text-left font-ibm font-medium text-base text-textColor"
+                >Linha de crédito:</span
+              >
+              <span
+                class="text-right font-ibm font-bold text-base text-textColor"
+                >Cooperativas de crédito</span
+              >
+            </div>
+            <div class="flex items-center justify-between w-full">
+              <span
+                class="text-left font-ibm font-medium text-base text-textColor"
+                >Data:</span
+              >
+              <span
+                class="text-right font-ibm font-bold text-base text-textColor"
+                >20/04/2023</span
+              >
+            </div>
+            <div class="flex items-center justify-between w-full">
+              <span
+                class="text-left inline-block font-ibm font-medium text-base text-textColor"
+                >Parcelas:</span
+              >
+              <span
+                class="text-right inline-block font-ibm font-bold text-base text-textColor"
+                >24/24</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Acompanhamento do pedido content -->
+
+        <div
+          class="max-w-[430px] w-full flex flex-col items-center justify-between gap-2 mb-[164px]"
+        >
+          <div class="mr-auto">
+            <p class="font-ibm font-semibold text-lg text-textColor">
+              Acompanhamento do pedido
+            </p>
+          </div>
+
+          <div class="border border-borderWhite p-4 w-full relative rounded-lg">
+            <!-- timeline  -->
+
+            <div
+              class="space-y-8 relative before:absolute before:top-5 before:inset-0 before:ml-[3px] calc-height before:w-[1.5px] before:bg-[#D9D9D9]"
+            >
+              <!-- Item #1 -->
+              <div class="relative flex items-center gap-4">
+                <!-- Icon (2px circle) -->
+                <div
+                  class="w-2 h-2 rounded-full bg-[#D9D9D9] shadow shrink-0"
+                ></div>
+                <!-- Card -->
+                <div class="">
+                  <h2 class="font-ibm font-medium text-base text-textColor">
+                    Verificação da documentação
+                  </h2>
+                  <p class="font-ibm font-medium text-xs text-muted">
+                    Em analise
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item #2 -->
+              <div class="relative flex items-center gap-4">
+                <!-- Icon (2px circle) -->
+                <div
+                  class="w-2 h-2 rounded-full bg-[#D9D9D9] shadow shrink-0"
+                ></div>
+                <!-- Card -->
+                <div class="">
+                  <h2 class="font-ibm font-medium text-base text-textColor">
+                    Envio da documentação
+                  </h2>
+                  <p class="font-ibm font-medium text-xs text-cGreen">
+                    Documentação enviada com sucesso
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item #3 -->
+              <div class="relative flex items-center gap-4">
+                <!-- Icon (2px circle) -->
+                <div
+                  class="w-2 h-2 rounded-full bg-[#D9D9D9] shadow shrink-0"
+                ></div>
+                <!-- Card -->
+                <div class="">
+                  <h2 class="font-ibm font-medium text-base text-textColor">
+                    Consulta ao dados do cliente
+                  </h2>
+                  <p class="font-ibm font-medium text-xs text-cGreen">
+                    Consulta realizada com sucesso
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item #4 -->
+              <div class="relative flex items-center gap-4">
+                <!-- Icon (2px circle) -->
+                <div
+                  class="w-2 h-2 rounded-full bg-[#D9D9D9] shadow shrink-0"
+                ></div>
+                <!-- Card -->
+                <div class="">
+                  <h2 class="font-ibm font-medium text-base text-textColor">
+                    Entrada no pedido
+                  </h2>
+                  <p class="font-ibm font-medium text-xs text-cGreen">
+                    Pedido realizado com sucesso
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer
+        class="py-6 flex items-center justify-around bg-primary max-w-[430px] w-full mx-auto"
+      >
+        <a href="#">
+          <img src="assets/img/icons/home.png" alt="" class="w-8 h-8" />
+        </a>
+        <a href="#">
+          <img src="assets/img/icons/animal1.png" alt="" class="w-8 h-8" />
+        </a>
+        <a href="#">
+          <img src="assets/img/icons/profile.png" alt="" class="w-8 h-8" />
+        </a>
+      </footer>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

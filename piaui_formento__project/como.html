@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--Google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- animate on scroll (AOS) CSS -->
+    <link href="assets/css/aos.css" rel="stylesheet" />
+    <!-- tailwind script file  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          container: {
+            center: true,
+            padding: {
+              DEFAULT: "13px",
+              sm: "15px",
+              lg: "15px",
+              xl: "15px",
+            },
+            screens: {
+              sm: "600px",
+              md: "768px",
+              lg: "1024px",
+              xl: "1150px",
+              "2xl": "1150px",
+            },
+          },
+          fontFamily: {
+            ibm: ["IBM Plex Sans", "sans-serif"],
+          },
+          extend: {
+            colors: {
+              primary: "#0F3771",
+              borderWhite: "#E1E5ED",
+              muted: "#8A8D91",
+              bgYellow: "#FFF1BF",
+              offWhite: "#E1E5ED",
+              yellowBorder: "#FFE8AD",
+              textColor: "#161A28",
+              cGreen: "#109E16",
+            },
+            backgroundSize: {
+              "size-200": "200% 200%",
+            },
+            backgroundPosition: {
+              "pos-0": "0% 0%",
+              "pos-100": "100% 100%",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          font-family: "IBM Plex Sans", sans-serif;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .bg-100 {
+          background-size: 100% 100%;
+        }
+        input[type="radio"] + label span {
+            transition: background .2s,
+            transform .2s;
+        }
+
+        input[type="radio"] + label span:hover,
+        input[type="radio"] + label:hover span{
+        transform: scale(1.2);
+        } 
+
+        input[type="radio"]:checked + label span {
+        background-color: #3490DC; 
+        box-shadow: 0px 0px 0px 2px white inset;
+        }
+
+        input[type="radio"]:checked + label{
+        color: #3490DC; 
+        }
+        
+      }
+    </style>
+
+    <title>Tailwind Project file</title>
+  </head>
+
+  <body>
+    <div
+      class="grid grid-rows-[auto_1fr_auto] h-screen max-w-[430px] w-full pt-6 mx-auto border"
+    >
+      <header>
+        <!-- header  -->
+        <div class="w-full flex items-center">
+          <a class="p-5 cursor-pointer inline-block">
+            <img src="assets/img/icons/backArrow.png" alt="" class="w-6 h-6" />
+          </a>
+          <p class="text-center w-full py-5 font-ibm font-semibold text-lg">
+            Simulação de empréstimo
+          </p>
+        </div>
+      </header>
+
+      <section
+        class="flex flex-col items-center justify-start px-6 overflow-y-scroll no-scrollbar max-w-[430px] w-full gap-2"
+      >
+        <!-- page number  -->
+        <div class="flex gap-2 justify-between items-center pt-8 pb-14">
+          <span
+            class="w-8 h-8 flex items-center justify-center bg-primary text-white rounded-full shrink-0"
+            >1</span
+          >
+          <span class="w-[42px] h-[2px] bg-[#E1E5ED] inline-block"></span>
+          <span
+            class="w-8 h-8 flex items-center justify-center bg-[#E1E5ED] text-muted rounded-full shrink-0"
+            >2</span
+          >
+          <span class="w-[42px] h-[2px] bg-[#E1E5ED] inline-block"></span>
+          <span
+            class="w-8 h-8 flex items-center justify-center bg-[#E1E5ED] text-muted rounded-full shrink-0"
+            >3</span
+          >
+          <span class="w-[42px] h-[2px] bg-[#E1E5ED] inline-block"></span>
+          <span
+            class="w-8 h-8 flex items-center justify-center bg-[#E1E5ED] text-muted rounded-full shrink-0"
+            >4</span
+          >
+        </div>
+
+        <!-- custom choice part  -->
+        <div
+          class="max-w-[430px] w-full flex flex-col items-center justify-between gap-2"
+        >
+          <div class="mr-auto pb-8">
+            <p class="font-ibm font-semibold text-lg text-textColor">
+              Como você se identifica?
+            </p>
+          </div>
+
+          <div class="w-full flex flex-col gap-2">
+            <!-- singel list  -->
+            <div
+              class="p-4 bg-[#E1E5ED] bg-opacity-25 w-full hover:shadow-md transition-all rounded-lg flex items-center"
+            >
+                <input id="radio1" type="radio" name="radio" class="hidden"  />
+                <label for="radio1" class="flex items-center cursor-pointer font-medium font-ibm text-base text-black gap-2 -tracking-[0.32px]">
+                    <span class="w-4 h-4 inline-block rounded-full border border-grey bg-white flex-no-shrink"></span>
+                    Crédito Microempreendedor Pessoa Física
+                </label>
+            </div>
+            <!-- single list  -->
+            <div
+                class="p-4 bg-[#E1E5ED] bg-opacity-25 w-full hover:shadow-md transition-all rounded-lg flex items-center"
+                >
+                    <input id="radio2" type="radio" name="radio" class="hidden"  />
+                    <label for="radio2" class="flex items-center cursor-pointer font-medium font-ibm text-base text-black gap-2 -tracking-[0.32px]">
+                        <span class="w-4 h-4 bg-white inline-block rounded-full border border-grey flex-no-shrink"></span>
+                        Crédito Microempreendedor Individual (MEI)
+                    </label>
+            </div>
+
+            <!-- single list 3 -->
+            <div
+              class="p-4 bg-[#E1E5ED] bg-opacity-25 w-full hover:shadow-md transition-all rounded-lg flex items-center"
+            >
+                <input id="radio3" type="radio" name="radio" class="hidden"  />
+                <label for="radio3" class="flex items-center cursor-pointer font-medium font-ibm text-base text-black gap-2 -tracking-[0.32px]">
+                    <span class="w-4 h-4 inline-block rounded-full border border-grey bg-white flex-no-shrink"></span>
+                    Microcrédito Rural
+                </label>
+            </div>
+            <!-- single list 4 -->
+            <div
+              class="p-4 bg-[#E1E5ED] bg-opacity-25 w-full hover:shadow-md transition-all rounded-lg flex items-center"
+            >
+                <input id="radio4" type="radio" name="radio" class="hidden"  />
+                <label for="radio4" class="flex items-center cursor-pointer font-medium font-ibm text-base text-black gap-2 -tracking-[0.32px]">
+                    <span class="w-4 h-4 inline-block rounded-full border border-grey bg-white flex-no-shrink"></span>
+                    Crédito Pequena e Média Empresa
+                </label>
+            </div>
+            <!-- single list 5 -->
+            <div
+              class="p-4 bg-[#E1E5ED] bg-opacity-25 w-full hover:shadow-md transition-all rounded-lg flex items-center"
+            >
+                <input id="radio5" type="radio" name="radio" class="hidden"  />
+                <label for="radio5" class="flex items-center cursor-pointer font-medium font-ibm text-base text-black gap-2 -tracking-[0.32px]">
+                    <span class="w-4 h-4 inline-block rounded-full border border-grey bg-white flex-no-shrink"></span>
+                    Crédito Inovação e Tecnologia (Finep)
+                </label>
+            </div>
+            <!-- single list 6 -->
+            <div
+              class="p-4 bg-[#E1E5ED] bg-opacity-25 w-full hover:shadow-md transition-all rounded-lg flex items-center"
+            >
+                <input id="radio6" type="radio" name="radio" class="hidden"  />
+                <label for="radio6" class="flex items-center cursor-pointer font-medium font-ibm text-base text-black gap-2 -tracking-[0.32px]">
+                    <span class="w-4 h-4 inline-block rounded-full border border-grey bg-white flex-no-shrink"></span>
+                    Crédito Turismo (Fungetur)
+                </label>
+            </div>
+            <!-- single list 7 -->
+            <div
+              class="p-4 bg-[#E1E5ED] bg-opacity-25 w-full hover:shadow-md transition-all rounded-lg flex items-center"
+            >
+                <input id="radio7" type="radio" name="radio" class="hidden"  />
+                <label for="radio7" class="flex items-center cursor-pointer font-medium font-ibm text-base text-black gap-2 -tracking-[0.32px]">
+                    <span class="w-4 h-4 inline-block rounded-full border border-grey bg-white flex-no-shrink"></span>
+                    INOVATAXI - 1,79% a.m.
+                </label>
+            </div>
+
+            <!-- single list 8 -->
+            <div
+              class="p-4 bg-[#E1E5ED] bg-opacity-25 w-full hover:shadow-md transition-all rounded-lg flex items-center"
+            >
+                <input id="radio8" type="radio" name="radio" class="hidden"  />
+                <label for="radio8" class="flex items-center cursor-pointer font-medium font-ibm text-base text-black gap-2 -tracking-[0.32px]">
+                    <span class="w-4 h-4 inline-block rounded-full border border-grey bg-white flex-no-shrink"></span>
+                    INOVATAXI - 1,49% a.m.
+                </label>
+            </div>
+        </div>
+      </section>
+
+      <footer
+        class="flex items-center justify-around bg-primary max-w-[430px] w-full mx-auto"
+      >
+        <button
+          type="button"
+          class="text-white font-ibm font-semibold text-base w-1/2 border-r-4 border-r-black h-full py-6"
+        >
+          Voltar
+        </button>
+        <button
+          type="button"
+          class="text-white font-ibm font-semibold text-base w-1/2 py-6"
+        >
+          Continuar
+        </button>
+      </footer>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

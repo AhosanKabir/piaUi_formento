@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--Google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- animate on scroll (AOS) CSS -->
+    <link href="assets/css/aos.css" rel="stylesheet" />
+    <!-- tailwind script file  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          container: {
+            center: true,
+            padding: {
+              DEFAULT: "13px",
+              sm: "15px",
+              lg: "15px",
+              xl: "15px",
+            },
+            screens: {
+              sm: "600px",
+              md: "768px",
+              lg: "1024px",
+              xl: "1150px",
+              "2xl": "1150px",
+            },
+          },
+          fontFamily: {
+            ibm: ["IBM Plex Sans", "sans-serif"],
+          },
+          extend: {
+            colors: {
+              primary: "#0F3771",
+              borderWhite: "#E1E5ED",
+              muted: "#8A8D91",
+            },
+            backgroundSize: {
+              "size-200": "200% 200%",
+            },
+            backgroundPosition: {
+              "pos-0": "0% 0%",
+              "pos-100": "100% 100%",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          font-family: "IBM Plex Sans", sans-serif;
+        }
+        .bg-100 {
+          background-size: 100% 100%;
+        }
+      }
+    </style>
+
+    <title>Tailwind Project file</title>
+  </head>
+
+  <body>
+    <section class="flex items-center justify-center">
+      <div class="max-w-[430px] w-full py-6">
+        <!-- logo div  -->
+        <div class="max-w-[230px] mx-auto mb-2 ">
+          <img
+            src="assets/img/logos/PiauiFomentoLOGO_1.png"
+            alt=""
+            class="w-full"
+          />
+        </div>
+
+        <!-- form area  -->
+        <div class="p-6">
+          <!-- form header  -->
+          <h1
+            class="font-ibm text-sm font-bold text-primary text-center mb-4 uppercase"
+          >
+            Faça seu login
+          </h1>
+
+          <!-- input field  -->
+          <form action="" class="mb-4">
+            <div class="relative w-full mb-4">
+              <div
+                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+              >
+                <img src="assets/img/icons/person.png" alt="" class="w-6 h-6" />
+              </div>
+              <input
+                type="text"
+                id="input-group-1"
+                name="#"
+                class="w-full text-primary pl-10 p-4 placeholder:text-base placeholder:text-muted placeholder:font-medium border border-borderWhite outline-none focus:ring-1 focus:ring-primary font-ibm font-medium focus:shadow-md"
+                placeholder="Digite seu CPF"
+              />
+            </div>
+            <div class="relative w-full">
+              <div
+                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+              >
+                <img src="assets/img/icons/lock.png" alt="" class="w-6 h-6" />
+              </div>
+              <input
+                type="password"
+                id="input-group-1"
+                name="#"
+                class="w-full text-primary pl-10 pr-10 p-4 placeholder:text-base placeholder:text-muted placeholder:font-medium border border-borderWhite outline-none focus:ring-1 focus:ring-primary font-ibm font-medium focus:shadow-md"
+                placeholder="Digite sua senha"
+              />
+              <div
+                class="absolute inset-y-0 right-0 pr-4 flex items-center pl-3 pointer-events-none"
+              >
+                <img src="assets/img/icons/eye.png" alt="" class="w-6 h-6" />
+              </div>
+            </div>
+
+            <button
+              class="text-white bg-primary font-medium text-base p-4 mt-10 w-full font-ibm"
+            >
+              Enter
+            </button>
+          </form>
+
+          <!-- divider  -->
+          <div class="flex items-center justify-center gap-2 p-2 mb-4">
+            <span class="w-full h-[1px] bg-borderWhite inline-block"></span>
+            <p class="font-ibm font-medium text-base relative -top-[2px]">ou</p>
+            <span class="w-full h-[1px] bg-borderWhite inline-block"></span>
+          </div>
+
+          <!-- facebook login  -->
+          <a
+            class="w-full text-primary p-4 border border-borderWhite outline-none hover:ring-1 hover:ring-primary hover:shadow-md flex items-center justify-center gap-2 cursor-pointer mb-4 rounded"
+          >
+            <i
+              ><img src="assets/img/icons/facebook.png" alt="" class="w-6 h-6"
+            /></i>
+            <span class="font-ibm font-medium text-base"
+              >Entrar com facebook</span
+            >
+          </a>
+          <!-- google login  -->
+          <a
+            class="w-full text-primary p-4 border border-borderWhite outline-none hover:ring-1 hover:ring-primary hover:shadow-md flex items-center justify-center gap-2 cursor-pointer mb-14 rounded"
+          >
+            <i
+              ><img src="assets/img/icons/google.png" alt="" class="w-6 h-6"
+            /></i>
+            <span class="font-ibm font-medium text-base"
+              >Entrar com facebook</span
+            >
+          </a>
+
+
+          <!-- bottom link  -->
+          <div class="text-center">
+            <p class="text-base font-ibm text-muted">
+                Ainda não é cadastrado? 
+                <a href="#" class="inline-block font-bold text-primary">Cadastre-se</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

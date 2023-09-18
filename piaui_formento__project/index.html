@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- animate on scroll (AOS) CSS -->
+    <link href="assets/css/aos.css" rel="stylesheet">
+    <!-- tailwind script file  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                container: {
+                    center: true,
+                    padding: {
+                        DEFAULT: '13px',
+                        sm: '15px',
+                        lg: '15px',
+                        xl: '15px',
+                    },
+                    screens: {
+                        sm: '600px',
+                        md: '768px',
+                        lg: '1024px',
+                        xl: '1150px',
+                        '2xl': '1150px',
+                    },
+                },
+                fontFamily: {
+                    ibm: ['IBM Plex Sans', 'sans-serif'],
+                },
+                extend: {
+                    colors: {
+                        bgColor:"#FFFCF9",
+                        colorYellow: "#FEF08A",
+                        colorPurple: "#8B5CF6",
+                        textColor: "#ffffff99",
+                        gradientOne: "#15CFF5",
+                        gradientTwo: "#3670DB",
+                        gradientThree: "#521DC3",
+                    },
+                    backgroundSize: {
+                        'size-200': '200% 200%',
+                    },
+                    backgroundPosition: {
+                        'pos-0': '0% 0%',
+                        'pos-100': '100% 100%',
+                    },
+                },
+            },
+        };
+
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer base{
+            /* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;700&display=swap');
+            
+            body{    
+                font-family: 'IBM Plex Sans', sans-serif;
+            }  */
+            .bg-100{
+                background-size: 100% 100%;
+            }
+        }
+    </style>
+
+    <title> Tailwind Project file </title>
+
+</head>
+
+<body>
+
+
+    <!--======== Main Area Start =========-->
+    <main class="main overflow-hidden">
+        <!--======== Hero Area Start =========-->
+        <section class="flex items-center justify-center">
+            <div class="max-w-[430px] w-full bg-blue-900 flex items-center justify-center h-screen px-12">
+                <div class="">
+                    <img src="assets/img/logos/PiauiFomentoLOGO.png" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--======== Main Area End =========-->
+
+
+    <!--======== Footer Area Start =========-->
+    
+    <!--======== Footer Area End =========-->
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--Google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- animate on scroll (AOS) CSS -->
+    <link href="assets/css/aos.css" rel="stylesheet" />
+    <!-- tailwind script file  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          container: {
+            center: true,
+            padding: {
+              DEFAULT: "13px",
+              sm: "15px",
+              lg: "15px",
+              xl: "15px",
+            },
+            screens: {
+              sm: "600px",
+              md: "768px",
+              lg: "1024px",
+              xl: "1150px",
+              "2xl": "1150px",
+            },
+          },
+          fontFamily: {
+            ibm: ["IBM Plex Sans", "sans-serif"],
+          },
+          extend: {
+            colors: {
+              primary: "#0F3771",
+              borderWhite: "#E1E5ED",
+              muted: "#8A8D91",
+              bgYellow: "#FFF1BF",
+              offWhite: "#E1E5ED",
+              yellowBorder: "#FFE8AD",
+              textColor: "#161A28",
+              cGreen: "#109E16",
+              cRed: "#E01D1D",
+            },
+            backgroundSize: {
+              "size-200": "200% 200%",
+            },
+            backgroundPosition: {
+              "pos-0": "0% 0%",
+              "pos-100": "100% 100%",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          font-family: "IBM Plex Sans", sans-serif;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .bg-100 {
+          background-size: 100% 100%;
+        }
+      }
+    </style>
+
+    <title>Tailwind Project file</title>
+  </head>
+
+  <body>
+    <div
+      class="grid grid-rows-[auto_1fr_auto] h-screen max-w-[430px] w-full pt-6 mx-auto "
+    >
+      <header>
+        <!-- header  -->
+        <div class="w-full flex items-center">
+          <a class="p-5 cursor-pointer inline-block">
+            <img src="assets/img/icons/backArrow.png" alt="" class="w-6 h-6" />
+          </a>
+          <p class="text-center w-full py-5 font-ibm font-semibold text-lg">
+            Meus empréstimos
+          </p>
+          <a class="p-5 cursor-pointer inline-block">
+            <img src="assets/img/icons/search.png" alt="" class="w-6 h-6" />
+          </a>
+        </div>
+      </header>
+
+      <section
+        class="flex flex-col items-center justify-start px-6 pt-6 overflow-y-scroll no-scrollbar max-w-[430px] w-full gap-2"
+      >
+        <!-- single card head  -->
+        <div class="max-w-[430px] w-full flex items-center justify-between">
+          <p class="inline-block font-ibm font-bold text-base text-textColor">
+            Empréstimo
+          </p>
+
+          <p class="font-ibm font-bold text-2xl text-cGreen">R$ 20.304,00</p>
+        </div>
+        <!--! single card 1  -->
+        <div
+          class="border border-offWhite max-w-[430px] w-full rounded-lg mb-6"
+        >
+          <!-- single card body  -->
+          <div class="flex items-center justify-center flex-col gap-2 p-4">
+            <div class="flex items-center justify-between w-full">
+              <span
+                class="text-left font-ibm font-medium text-base text-textColor"
+                >Linha de crédito:</span
+              >
+              <span
+                class="text-right font-ibm font-bold text-base text-textColor"
+                >Cooperativas de crédito</span
+              >
+            </div>
+            <div class="flex items-center justify-between w-full">
+              <span
+                class="text-left font-ibm font-medium text-base text-textColor"
+                >Data:</span
+              >
+              <span
+                class="text-right font-ibm font-bold text-base text-textColor"
+                >20/04/2023</span
+              >
+            </div>
+            <div class="flex items-center justify-between w-full">
+              <span
+                class="text-left inline-block font-ibm font-medium text-base text-textColor"
+                >Parcelas:</span
+              >
+              <span
+                class="text-right inline-block font-ibm font-bold text-base text-textColor"
+                >24/24</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- main component  -->
+        <div
+          class="max-w-[430px] w-full flex flex-col items-center justify-between gap-2"
+        >
+          <div class="mr-auto">
+            <p class="font-ibm font-semibold text-lg text-textColor">
+                Histórico de pagamentos
+            </p>
+          </div>
+
+          <!--! single card component 1  -->
+          <div class="border border-offWhite max-w-[430px] w-full rounded-lg">
+            <!-- single card head  -->
+            <div
+              class="flex items-center justify-between border-b border-b-offwhite px-4 py-3 bg-[#E1E5ED] bg-opacity-20"
+            >
+              <div class="flex items-center gap-2">
+                <span class="font-ibm font-medium text-base text-textColor">Parcela</span>
+                <span
+                  class="inline-block font-ibm font-bold text-base text-textColor"
+                  >1/36</span
+                >
+              </div>
+  
+              <span><img src="assets/img/icons/dots.png" alt="" class="w-4 h-4"></span>
+            </div>
+            <!-- single card body  -->
+            <div class="flex items-center justify-center flex-col gap-2 px-4 py-3">
+              <div class="flex items-center justify-between w-full">
+                <span
+                  class="text-left font-ibm font-bold text-base text-textColor"
+                  >Valor:</span
+                >
+                <span
+                  class="text-right font-ibm font-bold text-base text-textColor"
+                  >1.003,00</span
+                >
+              </div>
+              <div class="flex items-center justify-between w-full">
+                <span
+                  class="text-left font-ibm font-bold text-base text-textColor"
+                  >Vencimento:</span
+                >
+                <span
+                  class="text-right font-ibm font-bold text-base text-textColor"
+                  >20/04/2023</span
+                >
+              </div>
+              <div class="flex items-center justify-between w-full">
+                <span
+                  class="text-left inline-block font-ibm font-bold text-base text-textColor"
+                  >Status:</span
+                >
+                <span
+                  class="text-right inline-block font-ibm font-bold text-base text-cGreen"
+                  >Paga</span
+                >
+              </div>
+            </div>
+  
+            <!-- single card bottom  -->
+            <!-- <div class="w-full py-2 px-4 bg-gradient-to-r from-[#E1FFE3] to-[#E1FFE3]">
+                <p class="text-cGreen font-ibm font-medium text-sm">Empréstimo quitado</p>
+              </div> -->
+          </div>
+
+          <!--! single card component 2  -->
+          <div class="border border-offWhite max-w-[430px] w-full rounded-lg">
+            <!-- single card head  -->
+            <div
+              class="flex items-center justify-between border-b border-b-offwhite px-4 py-3 bg-[#E1E5ED] bg-opacity-20"
+            >
+              <div class="flex items-center gap-2">
+                <span class="font-ibm font-medium text-base text-textColor">Parcela</span>
+                <span
+                  class="inline-block font-ibm font-bold text-base text-textColor"
+                  >1/36</span
+                >
+              </div>
+  
+              <span><img src="assets/img/icons/dots.png" alt="" class="w-4 h-4"></span>
+            </div>
+            <!-- single card body  -->
+            <div class="flex items-center justify-center flex-col gap-2 px-4 py-3">
+              <div class="flex items-center justify-between w-full">
+                <span
+                  class="text-left font-ibm font-bold text-base text-textColor"
+                  >Valor:</span
+                >
+                <span
+                  class="text-right font-ibm font-bold text-base text-textColor"
+                  >1.003,00</span
+                >
+              </div>
+              <div class="flex items-center justify-between w-full">
+                <span
+                  class="text-left font-ibm font-bold text-base text-textColor"
+                  >Vencimento:</span
+                >
+                <span
+                  class="text-right font-ibm font-bold text-base text-textColor"
+                  >20/04/2023</span
+                >
+              </div>
+              <div class="flex items-center justify-between w-full">
+                <span
+                  class="text-left inline-block font-ibm font-bold text-base text-textColor"
+                  >Status:</span
+                >
+                <span
+                  class="text-right inline-block font-ibm font-bold text-base text-cRed"
+                  >Em atraso</span
+                >
+              </div>
+            </div>
+  
+            <!-- single card bottom  -->
+            <a
+                  href="#"
+                  class="bg-primary text-white flex gap-2 justify-center items-center pl-5 pr-6 py-3 rounded font-ibm font-medium text-base hover:shadow-md transition-all"
+                >
+                  <i
+                    ><img src="assets/img/icons/box.png" alt="" class="w-4 h-4"
+                  /></i>
+                  Pagar boleto
+                </a>
+          </div>
+
+          <!--! single card component 3  -->
+          <div class="border border-offWhite max-w-[430px] w-full rounded-lg">
+            <!-- single card head  -->
+            <div
+              class="flex items-center justify-between border-b border-b-offwhite px-4 py-3 bg-[#E1E5ED] bg-opacity-20"
+            >
+              <div class="flex items-center gap-2">
+                <span class="font-ibm font-medium text-base text-textColor">Parcela</span>
+                <span
+                  class="inline-block font-ibm font-bold text-base text-textColor"
+                  >1/36</span
+                >
+              </div>
+  
+              <span><img src="assets/img/icons/dots.png" alt="" class="w-4 h-4"></span>
+            </div>
+            <!-- single card body  -->
+            <div class="flex items-center justify-center flex-col gap-2 px-4 py-3">
+              <div class="flex items-center justify-between w-full">
+                <span
+                  class="text-left font-ibm font-bold text-base text-textColor"
+                  >Valor:</span
+                >
+                <span
+                  class="text-right font-ibm font-bold text-base text-textColor"
+                  >1.003,00</span
+                >
+              </div>
+              <div class="flex items-center justify-between w-full">
+                <span
+                  class="text-left font-ibm font-bold text-base text-textColor"
+                  >Vencimento:</span
+                >
+                <span
+                  class="text-right font-ibm font-bold text-base text-textColor"
+                  >20/04/2023</span
+                >
+              </div>
+              <div class="flex items-center justify-between w-full">
+                <span
+                  class="text-left inline-block font-ibm font-bold text-base text-textColor"
+                  >Status:</span
+                >
+                <span
+                  class="text-right inline-block font-ibm font-bold text-base text-textColor"
+                  >Aguardando pagamento</span
+                >
+              </div>
+            </div>
+  
+            <!-- single card bottom  -->
+            <a
+                  href="#"
+                  class="bg-primary text-white flex gap-2 justify-center items-center pl-5 pr-6 py-3 rounded font-ibm font-medium text-base hover:shadow-md transition-all"
+                >
+                  <i
+                    ><img src="assets/img/icons/box.png" alt="" class="w-4 h-4"
+                  /></i>
+                  Pagar boleto
+                </a>
+          </div>
+          
+        </div>
+      </section>
+
+      <footer
+        class="py-6 flex items-center justify-around bg-primary max-w-[430px] w-full mx-auto"
+      >
+        <a href="#">
+          <img src="assets/img/icons/home.png" alt="" class="w-8 h-8" />
+        </a>
+        <a href="#">
+          <img src="assets/img/icons/animal1.png" alt="" class="w-8 h-8" />
+        </a>
+        <a href="#">
+          <img src="assets/img/icons/profile.png" alt="" class="w-8 h-8" />
+        </a>
+      </footer>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--Google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- animate on scroll (AOS) CSS -->
+    <link href="assets/css/aos.css" rel="stylesheet" />
+    <!-- tailwind script file  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          container: {
+            center: true,
+            padding: {
+              DEFAULT: "13px",
+              sm: "15px",
+              lg: "15px",
+              xl: "15px",
+            },
+            screens: {
+              sm: "600px",
+              md: "768px",
+              lg: "1024px",
+              xl: "1150px",
+              "2xl": "1150px",
+            },
+          },
+          fontFamily: {
+            ibm: ["IBM Plex Sans", "sans-serif"],
+          },
+          extend: {
+            colors: {
+              primary: "#0F3771",
+              borderWhite: "#E1E5ED",
+              muted: "#8A8D91",
+              bgYellow: "#FFF1BF",
+              offWhite: "#E1E5ED",
+              yellowBorder: "#FFE8AD",
+              textColor: "#161A28",
+            },
+            backgroundSize: {
+              "size-200": "200% 200%",
+            },
+            backgroundPosition: {
+              "pos-0": "0% 0%",
+              "pos-100": "100% 100%",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          font-family: "IBM Plex Sans", sans-serif;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .bg-100 {
+          background-size: 100% 100%;
+        }
+      }
+    </style>
+
+    <title>Tailwind Project file</title>
+  </head>
+
+  <body>
+
+
+    <div class="grid grid-rows-[auto_1fr_auto] h-screen">
+        <header>
+            <!-- logo div  -->
+            <div class="max-w-[230px] mx-auto mb-2 pt-4">
+                <img
+                  src="assets/img/logos/PiauiFomentoLOGO_1.png"
+                  alt=""
+                  class="w-full"
+                />
+              </div>
+        </header>
+    
+        <section class="flex items-center justify-center px-6 overflow-y-scroll no-scrollbar">
+          <div class="max-w-[430px] w-full ">
+            
+            <!-- header  -->
+            <div class="py-6 px-10">
+              <h2 class="font-ibm font-semibold text-lg text-primary mb-[2px]">
+                Olá, Thiago Serafim
+              </h2>
+              <p class="font-ibm font-medium text-sm text-muted">
+                Lorem Ipsum is simply dummy text of the printing
+              </p>
+            </div>
+    
+            <!-- header bottom  -->
+            <div
+              class="border border-yellowBorder bg-bgYellow bg-opacity-50 pb-5 p-4 mx-6 rounded-xl flex items-center gap-4"
+            >
+              <!-- file img  -->
+              <div
+                class="flex items-center bg-white bg-opacity-60 justify-center rounded-full w-12 h-12 shrink-0"
+              >
+                <img src="assets/img/icons/file.png" alt="" class="w-8 h-8" />
+              </div>
+              <!-- content  -->
+              <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-[2px]">
+                  <h2 class="font-ibm font-medium text-base text-textColor">
+                    Boleto a vencer
+                  </h2>
+                  <p class="font-ibm font-medium text-xs text-muted">
+                    Lorem Ipsum is simply dummy <br />
+                    text of the printing
+                  </p>
+                </div>
+                <a
+                  href="#"
+                  class="bg-primary text-white flex gap-2 sm:flex-row items-center pl-5 pr-6 py-3 rounded-lg font-ibm font-medium text-base hover:shadow-md transition-all"
+                >
+                  <i
+                    ><img src="assets/img/icons/box.png" alt="" class="w-4 h-4"
+                  /></i>
+                  Pagar boleto
+                </a>
+              </div>
+            </div>
+    
+            <!-- Card area  -->
+            <div class="p-6">
+              <h2 class="font-ibm font-bold text-base text-primary pb-6">
+                O que deseja fazer?
+              </h2>
+              <div class="flex flex-col gap-4">
+                <!-- single card 1   -->
+                <div
+                  class="bg-offWhite bg-opacity-30 px-4 py-6 flex items-center justify-between gap-4 rounded-lg hover:ring-[1px] hover:ring-primary transition-all"
+                >
+                  <div
+                    class="w-16 h-16 bg-white flex items-center justify-center rounded-full shrink-0"
+                  >
+                    <img
+                      src="assets/img/icons/profile1.png"
+                      alt=""
+                      class="w-12 h-12"
+                    />
+                  </div>
+                  <div class="flex flex-col gap-[2px]">
+                    <h2 class="text-textColor font-ibm font-medium text-lg">
+                      Perfil
+                    </h2>
+                    <p class="font-ibm font-medium text-sm text-muted">
+                      Lorem Ipsum is simply dummy <br />
+                      text of the printing
+                    </p>
+                  </div>
+                  <a class="shrink-0" href="#">
+                    <img
+                      src="assets/img/icons/arrowRight.png"
+                      alt=""
+                      class="w-6 h-6"
+                    />
+                  </a>
+                </div>
+                <!-- single card 2  -->
+                <div
+                  class="bg-offWhite bg-opacity-30 px-4 py-6 flex items-center justify-between gap-4 rounded-lg hover:ring-[1px] hover:ring-primary transition-all"
+                >
+                  <div
+                    class="w-16 h-16 bg-white flex items-center justify-center rounded-full shrink-0"
+                  >
+                    <img
+                      src="assets/img/icons/animal.png"
+                      alt=""
+                      class="w-12 h-12"
+                    />
+                  </div>
+                  <div class="flex flex-col gap-[2px]">
+                    <h2 class="text-textColor font-ibm font-medium text-lg">
+                        Empréstimo
+                    </h2>
+                    <p class="font-ibm font-medium text-sm text-muted">
+                      Lorem Ipsum is simply dummy <br />
+                      text of the printing
+                    </p>
+                  </div>
+                  <a class="shrink-0" href="#">
+                    <img
+                      src="assets/img/icons/arrowRight.png"
+                      alt=""
+                      class="w-6 h-6"
+                    />
+                  </a>
+                </div>
+                <!-- single card 2  -->
+                <div
+                  class="bg-offWhite bg-opacity-30 px-4 py-6 flex items-center justify-between gap-4 rounded-lg hover:ring-[1px] hover:ring-primary transition-all"
+                >
+                  <div
+                    class="w-16 h-16 bg-white flex items-center justify-center rounded-full shrink-0"
+                  >
+                    <img
+                      src="assets/img/icons/face.png"
+                      alt=""
+                      class="w-12 h-12"
+                    />
+                  </div>
+                  <div class="flex flex-col gap-[2px]">
+                    <h2 class="text-textColor font-ibm font-medium text-lg">
+                        Simulação
+                    </h2>
+                    <p class="font-ibm font-medium text-sm text-muted">
+                      Lorem Ipsum is simply dummy <br />
+                      text of the printing
+                    </p>
+                  </div>
+                  <a class="shrink-0" href="#">
+                    <img
+                      src="assets/img/icons/arrowRight.png"
+                      alt=""
+                      class="w-6 h-6"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    
+        <footer class="py-6 flex items-center justify-around bg-primary max-w-[430px] w-full mx-auto">
+            <a href="#">
+                <img src="assets/img/icons/home.png" alt="" class="w-8 h-8">
+            </a>
+            <a href="#">
+                <img src="assets/img/icons/animal1.png" alt="" class="w-8 h-8">
+            </a>
+            <a href="#">
+                <img src="assets/img/icons/profile.png" alt="" class="w-8 h-8">
+            </a>
+        </footer>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
